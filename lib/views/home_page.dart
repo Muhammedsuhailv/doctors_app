@@ -87,7 +87,7 @@ class HomePage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Image(image: AssetImage("asset/doctor2.png")),
+                              Image(image: doctorsList[index]['image']),
                               const SizedBox(width: 15),
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -111,11 +111,16 @@ class HomePage extends StatelessWidget {
                               const Spacer(),
                               Padding(
                                 padding: const EdgeInsets.only(top: 30.0),
-                                child: Container(
-                                  width: 65,
-                                  height: 20,
-                                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), color: const Color(0xff019744)),
-                                  child: Center(child: const Text("Edit Profile", style: TextStyle(fontSize: 10, color: Colors.white))),
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => const AddDoctor()));
+                                  },
+                                  child: Container(
+                                    width: 65,
+                                    height: 20,
+                                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), color: const Color(0xff019744)),
+                                    child: Center(child: const Text("Edit Profile", style: TextStyle(fontSize: 10, color: Colors.white))),
+                                  ),
                                 ),
                               ),
                               const SizedBox(width: 10),
