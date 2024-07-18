@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 
 List<Map> doctorsList = [
-{
-'name':'Dr.Neeraj Madhav',
-'education':'BAMS, Resident Medical Officer',
-'location':'Ernakulam',
-'image':AssetImage("asset/doctor1.png"),
-},
+  {
+    'name':'Dr.Neeraj Madhav',
+    'education':'BAMS, Resident Medical Officer',
+    'location':'Ernakulam',
+    'image':AssetImage("asset/doctor1.png"),
+  },
   {
     'name':'Dr.Reshma R Mohan ',
     'education':'BAMS, Resident Medical Officer',

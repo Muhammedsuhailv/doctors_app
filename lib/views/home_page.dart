@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../model/doctors_list.dart';
 import 'add_doctor.dart';
+import 'doctors_list.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
