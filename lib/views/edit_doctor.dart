@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../widgets/custom_dropdown.dart';
 import '../widgets/custom_textfield.dart';
 
-class AddDoctor extends StatelessWidget {
-  const AddDoctor({super.key});
+class EditDoctor extends StatelessWidget {
+  const EditDoctor({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class AddDoctor extends StatelessWidget {
             },
             icon: const Icon(Icons.arrow_back_ios_new)),
         title: const Text(
-          "Add Doctor",
+          "Edit Doctor",
           style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
@@ -32,14 +32,14 @@ class AddDoctor extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const  SizedBox(
+          const  SizedBox(
               height: 30,
             ),
             Center(
               child: Stack(
                 clipBehavior: Clip.none,
                 children: [
-                  const   CircleAvatar(
+                const   CircleAvatar(
                     backgroundImage: AssetImage("asset/profile.png"),
                     radius: 60,
                   ),
@@ -62,7 +62,7 @@ class AddDoctor extends StatelessWidget {
                 ],
               ),
             ),
-            const   SizedBox(
+          const   SizedBox(
               height: 20,
             ),
             Padding(
@@ -95,7 +95,7 @@ class AddDoctor extends StatelessWidget {
                   hint: "Gender",
                   items: const ['Male','Female','Other']),
             ),
-            const   SizedBox(height: 20,),
+          const   SizedBox(height: 20,),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(

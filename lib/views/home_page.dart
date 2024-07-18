@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'add_doctor.dart';
+import 'package:kayla_soft/views/add_doctor.dart';
+import 'edit_doctor.dart';
 import 'doctors_list.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,9 +12,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: const Text(
+          "Doctors",
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+        ),
         actions: [
           SizedBox(
-            width: 150, // Adjust width as needed
+            width: screenWidth *0.25,
             child: DropdownButtonFormField<String>(
               decoration: InputDecoration(
                 hintText: 'Gender',
@@ -28,14 +34,14 @@ class HomePage extends StatelessWidget {
               items: ['Male', 'Female', 'Other'].map((String item) {
                 return DropdownMenuItem<String>(
                   value: item,
-                  child: Text(item),
+                  child: Text(item,style: TextStyle(fontSize: 12),),
                 );
               }).toList(),
             ),
           ),
           SizedBox(width: 10),
           SizedBox(
-            width: 150, // Adjust width as needed
+            width: screenWidth *0.3,
             child: DropdownButtonFormField<String>(
               decoration: InputDecoration(
                 hintText: 'District',
@@ -51,17 +57,12 @@ class HomePage extends StatelessWidget {
                   .map((String item) {
                 return DropdownMenuItem<String>(
                   value: item,
-                  child: Text(item),
+                  child: Text(item,style: TextStyle(fontSize: 12),),
                 );
               }).toList(),
             ),
           ),
         ],
-        backgroundColor: Colors.white,
-        title: const Text(
-          "Doctors",
-          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-        ),
       ),
       body: Column(
         children: [
@@ -72,6 +73,7 @@ class HomePage extends StatelessWidget {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
+                    elevation: 4,
                     child: Container(
                       height: 100,
                       width: screenWidth * 3,
@@ -112,7 +114,7 @@ class HomePage extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 30.0),
                                 child: InkWell(
                                   onTap: () {
-                                    Navigator.push(context, MaterialPageRoute(builder: (context) => const AddDoctor()));
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => const EditDoctor()));
                                   },
                                   child: Container(
                                     width: 65,

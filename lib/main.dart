@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kayla_soft/views/add_doctor.dart';
+import 'package:kayla_soft/views/edit_doctor.dart';
 import 'package:kayla_soft/views/bottom_navbar/bottom_navbar.dart';
 import 'package:kayla_soft/views/home_page.dart';
 

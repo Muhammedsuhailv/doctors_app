@@ -46,7 +46,7 @@ class _CustomDropdownState extends State<CustomDropdown> {
               items: widget.items.map((String item) {
                 return DropdownMenuItem<String>(
                   value: item,
-                  child: Text(item),
+                  child: Text(item,style: TextStyle(fontSize: 12),),
                 );
               }).toList(),
               onChanged: (String? newValue) {

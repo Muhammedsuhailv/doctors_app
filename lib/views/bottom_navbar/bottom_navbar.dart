@@ -1,7 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:kayla_soft/views/add_doctor.dart';
+import 'package:kayla_soft/views/edit_doctor.dart';
 import 'package:kayla_soft/views/home_page.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -16,7 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    AddDoctor(),
+    EditDoctor(),
     HomePage(),
     HomePage(),
   ];

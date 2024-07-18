@@ -5,7 +5,7 @@ List<Map> doctorsList = [
     'name':'Dr.Neeraj Madhav',
     'education':'BAMS, Resident Medical Officer',
     'location':'Ernakulam',
-    'image':AssetImage("asset/doctor1.png"),
+    'image':AssetImage("asset/doctor2.png"),
   },
   {
     'name':'Dr.Reshma R Mohan ',
@@ -17,6 +17,6 @@ List<Map> doctorsList = [
     'name':'Dr.Ravi ',
     'education':'BAMS, Resident Medical Officer',
     'location':'Kozhikode',
-    'image':AssetImage("asset/doctor3.png"),
+    'image':AssetImage("asset/doctor1.png"),
   },
 ];
