@@ -16,7 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    EditDoctor(),
+    EditDoctor(id: '', name:'', district: '', email: '', phone: '', gender: ''),
     HomePage(),
     HomePage(),
   ];

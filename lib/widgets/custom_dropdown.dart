@@ -10,7 +10,7 @@ class CustomDropdown extends StatefulWidget {
     required this.items,
     this.onChanged,
     this.selectedItem,
-    this.hint,
+    this.hint, String? value,
   });
 
   @override
@@ -18,12 +18,12 @@ class CustomDropdown extends StatefulWidget {
 }
 
 class _CustomDropdownState extends State<CustomDropdown> {
-  String? _selectedItem;
+  String? selectedItem;
 
   @override
   void initState() {
     super.initState();
-    _selectedItem = widget.selectedItem;
+    selectedItem = widget.selectedItem;
   }
 
   @override
@@ -41,17 +41,17 @@ class _CustomDropdownState extends State<CustomDropdown> {
           child: DropdownButtonHideUnderline(
             child: DropdownButton<String>(
               isExpanded: true,
-              value: _selectedItem,
+              value: selectedItem,
               hint: widget.hint != null ? Text(widget.hint!) : null, // Access hint from widget
               items: widget.items.map((String item) {
                 return DropdownMenuItem<String>(
                   value: item,
-                  child: Text(item,style: TextStyle(fontSize: 12),),
+                  child: Text(item),
                 );
               }).toList(),
               onChanged: (String? newValue) {
                 setState(() {
-                  _selectedItem = newValue;
+                  selectedItem = newValue;
                 });
                 if (widget.onChanged != null) {
                   widget.onChanged!(newValue);
